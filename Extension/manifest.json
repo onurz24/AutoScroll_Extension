@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AutoScroll Extension",
+  "version": "1.0",
+  "description": "Eine Chrome-Erweiterung, die das automatische Scrollen ermöglicht.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "./assets/images/icons/icon16x16.png",
+      "48": "./assets/images/icons/icon48x48.png",
+      "128": "./assets/images/icons/icon128x128.png"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./assets/js/background.js"]
+    }
+  ],
+  "icons": {
+    "16": "./assets/images/icons/icon16x16.png",
+    "48": "./assets/images/icons/icon48x48.png",
+    "128": "./assets/images/icons/icon128x128.png"
+  }
+}
